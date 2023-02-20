@@ -1,4 +1,4 @@
 def call() {
-        def gitcommit = "123456"
+        def gitcommit = sh(returnStdout: true,script: 'git show -s --format=format:"%s"').trim()
 		return gitcommit
 }
